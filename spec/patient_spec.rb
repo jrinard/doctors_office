@@ -31,4 +31,26 @@ describe(Patient) do
     end
   end
 
+  describe("#name") do
+    it("tells you doctors name") do
+      test_patient = Patient.new({:id => nil, :name => "Cody", :birthdate => '1991-06-11', :doctor_id => 1})
+      expect(test_patient.name()).to(eq("Cody"))
+    end
+  end
+
+  describe("#birthdate") do
+    it("tells you patients birthdate") do
+      test_patient = Patient.new({:id => nil, :name => "Cody", :birthdate => '1991-06-11', :doctor_id => 1})
+      expect(test_patient.birthdate()).to(eq("1991-06-11"))
+    end
+  end
+
+#is this needed?
+  describe("#doctor_id") do
+    it("tells you doctors id for a specfic patient") do
+      test_patient = Patient.new({:id => nil, :name => "Cody", :birthdate => '1991-06-11', :doctor_id => 1})
+      expect(test_patient.doctor_id()).to(eq(1))
+    end
+  end
+
 end

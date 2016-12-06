@@ -1,5 +1,4 @@
 class Patient
-
   attr_reader(:id, :name, :birthdate, :doctor_id)
 
   define_method(:initialize) do |attributes|
